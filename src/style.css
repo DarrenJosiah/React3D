@@ -4,3 +4,16 @@ html, body, #root, canvas {
     margin: 0;
     overflow: hidden;
 }
+
+.container-introduction {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1rem;
+    position: absolute;
+    color: white;
+    z-index: 100;
+    background-color: darkblue;
+    top: 1rem;
+    left: 1rem;
+    cursor: default;
+    user-select: none;
+}

@@ -6,6 +6,8 @@ import { Ground } from './Ground';
 import { PolarBear } from './PolarBear';
 import { Rings } from './Rings';
 import { Texture } from 'three';
+import { Boxes } from './Boxes';
+import Introduction from './Introduction';
 
 function ElementShow() {
   return (
@@ -13,7 +15,7 @@ function ElementShow() {
       {/* OrbitControls - helps move camera around a fixed point */}
       <OrbitControls target0={[0, 0.35, 0]} maxPolarAngle={1.45} /> 
 
-      <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
+      <PerspectiveCamera makeDefault fov={80} position={[3, 2, 5]} />
 
       {/* Mesh – a  Three.js class that represents a 3D object in the scene */}
       {/* This example is a red box, at the center of screen */}
@@ -58,7 +60,8 @@ function ElementShow() {
         )}
       </CubeCamera>
 
-      <Rings />
+      {/* <Rings /> */}
+      <Boxes />
       <Ground />
     </>
   )
@@ -68,6 +71,8 @@ function App() {
   return (
     // Suspense - a feature in the React library for handling asynchronous rendering
     <Suspense fallback={null}> 
+      <Introduction />
+
       {/* Canvas - Three.js uses to render 3D graphics */}
       <Canvas shadows>
         <ElementShow />
